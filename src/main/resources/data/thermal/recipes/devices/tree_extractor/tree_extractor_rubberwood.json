@@ -1,14 +1,14 @@
 {
   "type": "thermal:tree_extractor",
   "trunk": {
-    "block": "thermal:rubberwood_log",
-    "properties": {
+    "Name": "thermal:rubberwood_log",
+    "Properties": {
       "axis": "y"
     }
   },
   "leaves": {
-    "block": "thermal:rubberwood_leaves",
-    "properties": {
+    "Name": "thermal:rubberwood_leaves",
+    "Properties": {
       "persistent": "false"
     }
   },
