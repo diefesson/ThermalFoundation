@@ -85,6 +85,27 @@ public class TFndTagsProvider {
                     TFndTags.Blocks.ORES_SULFUR,
                     TFndTags.Blocks.ORES_TIN
             );
+            tag(Tags.Blocks.ORES_IN_GROUND_STONE).add(BLOCKS.get(ID_APATITE_ORE));
+            tag(Tags.Blocks.ORES_IN_GROUND_STONE).add(BLOCKS.get(ID_CINNABAR_ORE));
+            tag(Tags.Blocks.ORES_IN_GROUND_STONE).add(BLOCKS.get(ID_LEAD_ORE));
+            tag(Tags.Blocks.ORES_IN_GROUND_STONE).add(BLOCKS.get(ID_NICKEL_ORE));
+            tag(Tags.Blocks.ORES_IN_GROUND_STONE).add(BLOCKS.get(ID_NITER_ORE));
+            tag(Tags.Blocks.ORES_IN_GROUND_STONE).add(BLOCKS.get(ID_RUBY_ORE));
+            tag(Tags.Blocks.ORES_IN_GROUND_STONE).add(BLOCKS.get(ID_SAPPHIRE_ORE));
+            tag(Tags.Blocks.ORES_IN_GROUND_STONE).add(BLOCKS.get(ID_SILVER_ORE));
+            tag(Tags.Blocks.ORES_IN_GROUND_STONE).add(BLOCKS.get(ID_SULFUR_ORE));
+            tag(Tags.Blocks.ORES_IN_GROUND_STONE).add(BLOCKS.get(ID_TIN_ORE));
+
+            tag(Tags.Blocks.ORES_IN_GROUND_DEEPSLATE).add(BLOCKS.get(deepslate(ID_APATITE_ORE)));
+            tag(Tags.Blocks.ORES_IN_GROUND_DEEPSLATE).add(BLOCKS.get(deepslate(ID_CINNABAR_ORE)));
+            tag(Tags.Blocks.ORES_IN_GROUND_DEEPSLATE).add(BLOCKS.get(deepslate(ID_LEAD_ORE)));
+            tag(Tags.Blocks.ORES_IN_GROUND_DEEPSLATE).add(BLOCKS.get(deepslate(ID_NICKEL_ORE)));
+            tag(Tags.Blocks.ORES_IN_GROUND_DEEPSLATE).add(BLOCKS.get(deepslate(ID_NITER_ORE)));
+            tag(Tags.Blocks.ORES_IN_GROUND_DEEPSLATE).add(BLOCKS.get(deepslate(ID_RUBY_ORE)));
+            tag(Tags.Blocks.ORES_IN_GROUND_DEEPSLATE).add(BLOCKS.get(deepslate(ID_SAPPHIRE_ORE)));
+            tag(Tags.Blocks.ORES_IN_GROUND_DEEPSLATE).add(BLOCKS.get(deepslate(ID_SILVER_ORE)));
+            tag(Tags.Blocks.ORES_IN_GROUND_DEEPSLATE).add(BLOCKS.get(deepslate(ID_SULFUR_ORE)));
+            tag(Tags.Blocks.ORES_IN_GROUND_DEEPSLATE).add(BLOCKS.get(deepslate(ID_TIN_ORE)));
 
             tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BLOCKS.get(ID_APATITE_ORE));
             tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BLOCKS.get(ID_CINNABAR_ORE));
