@@ -5,7 +5,7 @@ import cofh.core.common.entity.ChestBoatCoFH;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.vehicle.Boat;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.RegistryObject;
 
 import static cofh.thermal.core.ThermalCore.ENTITIES;
 import static cofh.thermal.foundation.init.registries.TFndIDs.ID_RUBBERWOOD_BOAT;

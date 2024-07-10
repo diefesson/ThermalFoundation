@@ -1,7 +1,7 @@
 package cofh.thermal.foundation.util;
 
 import cofh.core.client.renderer.entity.BoatRendererCoFH;
-import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 
 import static cofh.lib.util.constants.ModIds.ID_THERMAL;
 import static cofh.thermal.foundation.client.model.geom.ModelLayers.RUBBERWOOD_BOAT_LAYER;
