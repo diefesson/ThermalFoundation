@@ -22,7 +22,7 @@ import static cofh.thermal.core.ThermalCore.ITEMS;
 import static cofh.thermal.core.util.RegistrationHelper.deepslate;
 import static cofh.thermal.core.util.RegistrationHelper.raw;
 import static cofh.thermal.foundation.init.registries.TFndIDs.*;
-import static net.minecraftforge.common.Tags.Items.*;
+import static net.neoforged.neoforge.common.Tags.Items.*;
 
 public class TFndTagsProvider {
 

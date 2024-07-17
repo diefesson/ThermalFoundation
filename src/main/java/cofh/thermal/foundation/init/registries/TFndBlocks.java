@@ -3,8 +3,9 @@ package cofh.thermal.foundation.init.registries;
 import cofh.core.common.item.BlockItemCoFH;
 import cofh.lib.common.block.OreBlockCoFH;
 import cofh.lib.util.Utils;
-import cofh.thermal.foundation.common.world.RubberTreeGrower;
+import cofh.thermal.foundation.init.data.worldgen.TFndFeatures;
 import com.google.common.collect.ImmutableSet;
+import net.minecraft.util.ColorRGBA;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -24,8 +25,8 @@ import static cofh.thermal.core.init.registries.ThermalCreativeTabs.blocksTab;
 import static cofh.thermal.core.util.RegistrationHelper.*;
 import static cofh.thermal.foundation.ThermalFoundation.WOOD_TYPE_RUBBERWOOD;
 import static cofh.thermal.foundation.init.registries.TFndIDs.*;
-import static net.minecraft.world.level.block.state.BlockBehaviour.Properties.copy;
 import static net.minecraft.world.level.block.state.BlockBehaviour.Properties.of;
+import static net.minecraft.world.level.block.state.BlockBehaviour.Properties.ofFullCopy;
 import static net.minecraft.world.level.material.MapColor.*;
 
 public class TFndBlocks {
@@ -107,10 +108,10 @@ public class TFndBlocks {
         blocksTab(registerBlock(ID_SAPPHIRE_ORE, () -> OreBlockCoFH.createStoneOre().xp(3, 7), ID_THERMAL_FOUNDATION));
         blocksTab(registerBlock(deepslate(ID_SAPPHIRE_ORE), () -> OreBlockCoFH.createDeepslateOre().xp(3, 7), ID_THERMAL_FOUNDATION));
 
-        blocksTab(registerBlock(ID_OIL_SAND, () -> new SandBlock(14406560, copy(Blocks.SAND)),
+        blocksTab(registerBlock(ID_OIL_SAND, () -> new ColoredFallingBlock(new ColorRGBA(14406560), ofFullCopy(Blocks.SAND)),
                 () -> new BlockItemCoFH(BLOCKS.get(ID_OIL_SAND), itemProperties()).setBurnTime(2400).setModId(ID_THERMAL_FOUNDATION)));
 
-        blocksTab(registerBlock(ID_OIL_RED_SAND, () -> new SandBlock(11098145, copy(Blocks.RED_SAND)),
+        blocksTab(registerBlock(ID_OIL_RED_SAND, () -> new ColoredFallingBlock(new ColorRGBA(11098145), ofFullCopy(Blocks.RED_SAND)),
                 () -> new BlockItemCoFH(BLOCKS.get(ID_OIL_RED_SAND), itemProperties()).setBurnTime(2400).setModId(ID_THERMAL_FOUNDATION)));
     }
 
@@ -141,7 +142,7 @@ public class TFndBlocks {
         blocksTab(150, registerBlock(ID_STRIPPED_RUBBERWOOD_LOG, () -> Blocks.log(TERRACOTTA_GREEN, TERRACOTTA_GREEN), ID_THERMAL_FOUNDATION));
         blocksTab(150, registerBlock(ID_RUBBERWOOD_WOOD, () -> new RotatedPillarBlock(of().mapColor(QUARTZ).strength(2.0F).sound(SoundType.WOOD)), ID_THERMAL_FOUNDATION));
         blocksTab(150, registerBlock(ID_STRIPPED_RUBBERWOOD_WOOD, () -> new RotatedPillarBlock(of().mapColor(TERRACOTTA_GREEN).strength(2.0F).sound(SoundType.WOOD)), ID_THERMAL_FOUNDATION));
-        blocksTab(150, registerBlock(ID_RUBBERWOOD_SAPLING, () -> new SaplingBlock(new RubberTreeGrower(), of().mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS)), ID_THERMAL_FOUNDATION));
+        blocksTab(150, registerBlock(ID_RUBBERWOOD_SAPLING, () -> new SaplingBlock(TFndFeatures.RUBBERWOOD, of().mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS)), ID_THERMAL_FOUNDATION));
         blocksTab(150, registerBlock(ID_RUBBERWOOD_LEAVES, () -> Blocks.leaves(SoundType.GRASS), ID_THERMAL_FOUNDATION));
 
         if (Blocks.FLOWER_POT instanceof FlowerPotBlock) {
@@ -149,11 +150,11 @@ public class TFndBlocks {
         }
         registerWoodBlockSet("rubberwood", TERRACOTTA_GREEN, 1.5F, 2.5F, SoundType.WOOD, WOOD_TYPE_RUBBERWOOD, ID_THERMAL_FOUNDATION);
 
-        registerBlockOnly("rubberwood_sign", () -> new StandingSignBlock(of().forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0F).sound(SoundType.WOOD), WOOD_TYPE_RUBBERWOOD));
-        registerBlockOnly("rubberwood_wall_sign", () -> new WallSignBlock(of().forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0F).sound(SoundType.WOOD).lootFrom(BLOCKS.getSup("rubberwood_sign")), WOOD_TYPE_RUBBERWOOD));
+        registerBlockOnly("rubberwood_sign", () -> new StandingSignBlock(WOOD_TYPE_RUBBERWOOD, of().forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0F).sound(SoundType.WOOD)));
+        registerBlockOnly("rubberwood_wall_sign", () -> new WallSignBlock(WOOD_TYPE_RUBBERWOOD, of().forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0F).sound(SoundType.WOOD).lootFrom(BLOCKS.getSup("rubberwood_sign"))));
 
-        registerBlockOnly("rubberwood_hanging_sign", () -> new CeilingHangingSignBlock(of().forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0F).sound(SoundType.WOOD), WOOD_TYPE_RUBBERWOOD));
-        registerBlockOnly("rubberwood_wall_hanging_sign", () -> new WallHangingSignBlock(of().forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0F).sound(SoundType.WOOD).lootFrom(BLOCKS.getSup("rubberwood_hanging_sign")), WOOD_TYPE_RUBBERWOOD));
+        registerBlockOnly("rubberwood_hanging_sign", () -> new CeilingHangingSignBlock(WOOD_TYPE_RUBBERWOOD, of().forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0F).sound(SoundType.WOOD)));
+        registerBlockOnly("rubberwood_wall_hanging_sign", () -> new WallHangingSignBlock(WOOD_TYPE_RUBBERWOOD, of().forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0F).sound(SoundType.WOOD).lootFrom(BLOCKS.getSup("rubberwood_hanging_sign"))));
     }
     // endregion
 }

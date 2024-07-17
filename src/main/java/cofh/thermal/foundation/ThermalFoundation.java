@@ -12,14 +12,15 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
-import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.fml.DistExecutor;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neoforged.fml.loading.FMLEnvironment;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 
+import static cofh.lib.util.FlagManager.setFlag;
 import static cofh.lib.util.constants.ModIds.ID_THERMAL_FOUNDATION;
 import static cofh.thermal.core.ThermalCore.BLOCKS;
 import static cofh.thermal.foundation.client.model.geom.ModelLayers.RUBBERWOOD_BOAT_LAYER;
@@ -31,13 +32,12 @@ import static cofh.thermal.lib.util.ThermalFlags.*;
 @Mod (ID_THERMAL_FOUNDATION)
 public class ThermalFoundation {
 
-    public static final TFndProxy PROXY = DistExecutor.unsafeRunForDist(() -> TFndProxyClient::new, () -> TFndProxy::new);
+    public static final TFndProxy PROXY = FMLEnvironment.dist.isClient() ? new TFndProxyClient() : new TFndProxy();
 
-    public ThermalFoundation() {
+    public ThermalFoundation(ModContainer modContainer, IEventBus modEventBus) {
 
         setFeatureFlags();
-
-        final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        ;
 
         modEventBus.addListener(this::entityLayerSetup);
         modEventBus.addListener(this::entityRendererSetup);

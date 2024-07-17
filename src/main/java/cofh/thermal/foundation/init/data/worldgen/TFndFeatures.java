@@ -12,6 +12,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
@@ -31,6 +32,7 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
 import java.util.List;
+import java.util.Optional;
 
 import static cofh.lib.util.constants.ModIds.ID_THERMAL;
 import static cofh.thermal.core.ThermalCore.BLOCKS;
@@ -214,5 +216,7 @@ public class TFndFeatures {
         // endregion
 
     }
+
+    public static final TreeGrower RUBBERWOOD = new TreeGrower("thermal:rubberwood", Optional.of(TFndFeatures.Configured.MEGA_RUBBERWOOD_TREE), Optional.of(TFndFeatures.Configured.RUBBERWOOD_TREE), Optional.empty());
 
 }

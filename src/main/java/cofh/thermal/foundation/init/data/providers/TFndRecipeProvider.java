@@ -2,14 +2,11 @@ package cofh.thermal.foundation.init.data.providers;
 
 import cofh.lib.init.data.RecipeProviderCoFH;
 import cofh.lib.init.tags.ItemTagsCoFH;
-import cofh.thermal.lib.util.ThermalFlags;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.common.Tags;
-
-import java.util.function.Consumer;
 
 import static cofh.lib.util.constants.ModIds.ID_THERMAL;
 import static cofh.thermal.core.ThermalCore.ITEMS;
@@ -21,44 +18,43 @@ public class TFndRecipeProvider extends RecipeProviderCoFH {
     public TFndRecipeProvider(PackOutput output) {
 
         super(output, ID_THERMAL);
-        manager = ThermalFlags.manager();
     }
 
     @Override
-    protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
+    protected void buildRecipes(RecipeOutput recipeOutput) {
 
         var reg = ITEMS;
 
-        generateTypeRecipes(reg, consumer, "lead");
-        generateTypeRecipes(reg, consumer, "nickel");
-        generateTypeRecipes(reg, consumer, "silver");
-        generateTypeRecipes(reg, consumer, "tin");
+        generateTypeRecipes(reg, recipeOutput, "lead");
+        generateTypeRecipes(reg, recipeOutput, "nickel");
+        generateTypeRecipes(reg, recipeOutput, "silver");
+        generateTypeRecipes(reg, recipeOutput, "tin");
 
-        generateTypeRecipes(reg, consumer, "bronze");
-        generateTypeRecipes(reg, consumer, "constantan");
-        generateTypeRecipes(reg, consumer, "electrum");
-        generateTypeRecipes(reg, consumer, "invar");
+        generateTypeRecipes(reg, recipeOutput, "bronze");
+        generateTypeRecipes(reg, recipeOutput, "constantan");
+        generateTypeRecipes(reg, recipeOutput, "electrum");
+        generateTypeRecipes(reg, recipeOutput, "invar");
 
-        generateSmeltingAndBlastingRecipes(reg, consumer, reg.get(ID_APATITE_ORE), reg.get("apatite"), 0.5F, "smelting");
-        generateSmeltingAndBlastingRecipes(reg, consumer, reg.get(ID_CINNABAR_ORE), reg.get("cinnabar"), 0.5F, "smelting");
-        generateSmeltingAndBlastingRecipes(reg, consumer, reg.get(ID_NITER_ORE), reg.get("niter"), 0.5F, "smelting");
-        generateSmeltingAndBlastingRecipes(reg, consumer, reg.get(ID_SULFUR_ORE), reg.get("sulfur"), 0.5F, "smelting");
+        generateSmeltingAndBlastingRecipes(reg, recipeOutput, reg.get(ID_APATITE_ORE), reg.get("apatite"), 0.5F, "smelting");
+        generateSmeltingAndBlastingRecipes(reg, recipeOutput, reg.get(ID_CINNABAR_ORE), reg.get("cinnabar"), 0.5F, "smelting");
+        generateSmeltingAndBlastingRecipes(reg, recipeOutput, reg.get(ID_NITER_ORE), reg.get("niter"), 0.5F, "smelting");
+        generateSmeltingAndBlastingRecipes(reg, recipeOutput, reg.get(ID_SULFUR_ORE), reg.get("sulfur"), 0.5F, "smelting");
 
-        generateSmeltingAndBlastingRecipes(reg, consumer, "lead", 0.8F);
-        generateSmeltingAndBlastingRecipes(reg, consumer, "nickel", 1.0F);
-        generateSmeltingAndBlastingRecipes(reg, consumer, "silver", 1.0F);
-        generateSmeltingAndBlastingRecipes(reg, consumer, "tin", 0.6F);
+        generateSmeltingAndBlastingRecipes(reg, recipeOutput, "lead", 0.8F);
+        generateSmeltingAndBlastingRecipes(reg, recipeOutput, "nickel", 1.0F);
+        generateSmeltingAndBlastingRecipes(reg, recipeOutput, "silver", 1.0F);
+        generateSmeltingAndBlastingRecipes(reg, recipeOutput, "tin", 0.6F);
 
-        generateSmeltingAndBlastingRecipes(reg, consumer, "bronze", 0);
-        generateSmeltingAndBlastingRecipes(reg, consumer, "constantan", 0);
-        generateSmeltingAndBlastingRecipes(reg, consumer, "electrum", 0);
-        generateSmeltingAndBlastingRecipes(reg, consumer, "invar", 0);
+        generateSmeltingAndBlastingRecipes(reg, recipeOutput, "bronze", 0);
+        generateSmeltingAndBlastingRecipes(reg, recipeOutput, "constantan", 0);
+        generateSmeltingAndBlastingRecipes(reg, recipeOutput, "electrum", 0);
+        generateSmeltingAndBlastingRecipes(reg, recipeOutput, "invar", 0);
 
-        generateAlloyRecipes(consumer);
+        generateAlloyRecipes(recipeOutput);
     }
 
     // region HELPERS
-    private void generateAlloyRecipes(Consumer<FinishedRecipe> consumer) {
+    private void generateAlloyRecipes(RecipeOutput consumer) {
 
         var reg = ITEMS;
 

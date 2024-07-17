@@ -10,8 +10,8 @@ import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.neoforged.neoforge.common.world.BiomeModifier;
-import net.neoforged.neoforge.common.world.ForgeBiomeModifiers.AddFeaturesBiomeModifier;
-import net.neoforged.neoforge.registries.ForgeRegistries;
+import net.neoforged.neoforge.common.world.BiomeModifiers;
+import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
 import static cofh.lib.util.constants.ModIds.ID_THERMAL;
 import static cofh.lib.util.helpers.DatapackHelper.holderSetIntersection;
@@ -62,18 +62,18 @@ public class TFndBiomeModifiers {
 
         registerOre(context, OIL_SAND, oilSandsBiomes, TFndFeatures.Placed.OIL_SAND);
 
-        context.register(RUBBERWOOD_TREES, new AddFeaturesBiomeModifier(rubberwoodTreeBiomes, rubberwoodTrees, VEGETAL_DECORATION));
+        context.register(RUBBERWOOD_TREES, new BiomeModifiers.AddFeaturesBiomeModifier(rubberwoodTreeBiomes, rubberwoodTrees, VEGETAL_DECORATION));
     }
 
     // region HELPERS
     private static ResourceKey<BiomeModifier> createKey(String name) {
 
-        return ResourceKey.create(ForgeRegistries.Keys.BIOME_MODIFIERS, new ResourceLocation(ID_THERMAL, name));
+        return ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, new ResourceLocation(ID_THERMAL, name));
     }
 
     private static void registerOre(BootstapContext<BiomeModifier> context, ResourceKey<BiomeModifier> biomeMod, HolderSet<Biome> biomes, ResourceKey<PlacedFeature> feature) {
 
-        context.register(biomeMod, new AddFeaturesBiomeModifier(biomes,
+        context.register(biomeMod, new BiomeModifiers.AddFeaturesBiomeModifier(biomes,
                 HolderSet.direct(context.lookup(Registries.PLACED_FEATURE).getOrThrow(feature)),
                 UNDERGROUND_ORES));
     }
