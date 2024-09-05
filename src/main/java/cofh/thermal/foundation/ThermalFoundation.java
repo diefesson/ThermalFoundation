@@ -37,7 +37,6 @@ public class ThermalFoundation {
     public ThermalFoundation(ModContainer modContainer, IEventBus modEventBus) {
 
         setFeatureFlags();
-        ;
 
         modEventBus.addListener(this::entityLayerSetup);
         modEventBus.addListener(this::entityRendererSetup);

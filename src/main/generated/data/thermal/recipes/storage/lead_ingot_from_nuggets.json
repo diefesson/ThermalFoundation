@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "#": {
-      "tag": "forge:nuggets/lead"
+      "tag": "c:nuggets/lead"
     },
     "I": {
       "item": "thermal:lead_nugget"

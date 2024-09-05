@@ -1,12 +1,12 @@
 {
   "values": [
-    "#forge:nuggets/lead",
-    "#forge:nuggets/nickel",
-    "#forge:nuggets/silver",
-    "#forge:nuggets/tin",
-    "#forge:nuggets/bronze",
-    "#forge:nuggets/constantan",
-    "#forge:nuggets/electrum",
-    "#forge:nuggets/invar"
+    "#c:nuggets/lead",
+    "#c:nuggets/nickel",
+    "#c:nuggets/silver",
+    "#c:nuggets/tin",
+    "#c:nuggets/bronze",
+    "#c:nuggets/constantan",
+    "#c:nuggets/electrum",
+    "#c:nuggets/invar"
   ]
 }

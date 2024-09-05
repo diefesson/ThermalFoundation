@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "#": {
-      "tag": "forge:raw_materials/nickel"
+      "tag": "c:raw_materials/nickel"
     },
     "I": {
       "item": "thermal:raw_nickel"

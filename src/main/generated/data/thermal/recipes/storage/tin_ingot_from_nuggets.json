@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "#": {
-      "tag": "forge:nuggets/tin"
+      "tag": "c:nuggets/tin"
     },
     "I": {
       "item": "thermal:tin_nugget"

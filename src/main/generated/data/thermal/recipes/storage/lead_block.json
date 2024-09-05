@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "#": {
-      "tag": "forge:ingots/lead"
+      "tag": "c:ingots/lead"
     },
     "I": {
       "item": "thermal:lead_ingot"

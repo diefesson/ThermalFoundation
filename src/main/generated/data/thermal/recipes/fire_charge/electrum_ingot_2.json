@@ -4,7 +4,7 @@
   "ingredients": [
     [
       {
-        "tag": "forge:dusts/gold"
+        "tag": "c:dusts/gold"
       },
       {
         "tag": "forge:ingots/gold"
@@ -12,10 +12,10 @@
     ],
     [
       {
-        "tag": "forge:dusts/silver"
+        "tag": "c:dusts/silver"
       },
       {
-        "tag": "forge:ingots/silver"
+        "tag": "c:ingots/silver"
       }
     ],
     {

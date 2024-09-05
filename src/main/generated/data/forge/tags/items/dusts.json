@@ -1,14 +1,14 @@
 {
   "values": [
-    "#forge:dusts/lead",
-    "#forge:dusts/nickel",
-    "#forge:dusts/silver",
-    "#forge:dusts/tin",
-    "#forge:dusts/bronze",
-    "#forge:dusts/constantan",
-    "#forge:dusts/electrum",
-    "#forge:dusts/invar",
-    "#forge:dusts/ruby",
-    "#forge:dusts/sapphire"
+    "#c:dusts/lead",
+    "#c:dusts/nickel",
+    "#c:dusts/silver",
+    "#c:dusts/tin",
+    "#c:dusts/bronze",
+    "#c:dusts/constantan",
+    "#c:dusts/electrum",
+    "#c:dusts/invar",
+    "#c:dusts/ruby",
+    "#c:dusts/sapphire"
   ]
 }

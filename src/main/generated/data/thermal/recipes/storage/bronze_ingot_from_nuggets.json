@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "#": {
-      "tag": "forge:nuggets/bronze"
+      "tag": "c:nuggets/bronze"
     },
     "I": {
       "item": "thermal:bronze_nugget"

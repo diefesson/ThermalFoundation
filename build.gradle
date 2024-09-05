@@ -108,8 +108,8 @@ repositories {
 dependencies {
     implementation("net.neoforged:neoforge:${neo_version}")
 
-    implementation("com.teamcofh:cofh_core:${mc_version}-${cofh_core_version}.+")
-    implementation("com.teamcofh:thermal_core:${mc_version}-${thermal_core_version}.+") {
+    implementation("com.teamcofh:cofh_core:${mc_version}-${cofh_core_version}+")
+    implementation("com.teamcofh:thermal_core:${mc_version}-${thermal_core_version}+") {
         jarJar.ranged(it, "[${mc_version}-${thermal_core_version},${mc_version}-${thermal_core_max_version}]")
     }
 

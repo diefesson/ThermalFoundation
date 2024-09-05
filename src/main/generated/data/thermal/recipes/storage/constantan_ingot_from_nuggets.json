@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "#": {
-      "tag": "forge:nuggets/constantan"
+      "tag": "c:nuggets/constantan"
     },
     "I": {
       "item": "thermal:constantan_nugget"

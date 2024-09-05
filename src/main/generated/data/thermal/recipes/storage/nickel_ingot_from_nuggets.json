@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "#": {
-      "tag": "forge:nuggets/nickel"
+      "tag": "c:nuggets/nickel"
     },
     "I": {
       "item": "thermal:nickel_nugget"

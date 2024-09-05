@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "#": {
-      "tag": "forge:nuggets/electrum"
+      "tag": "c:nuggets/electrum"
     },
     "I": {
       "item": "thermal:electrum_nugget"

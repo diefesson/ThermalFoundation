@@ -1,6 +1,6 @@
 {
   "values": [
-    "#forge:gems/ruby",
-    "#forge:gems/sapphire"
+    "#c:gems/ruby",
+    "#c:gems/sapphire"
   ]
 }

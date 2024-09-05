@@ -4,7 +4,7 @@
   "ingredients": [
     [
       {
-        "tag": "forge:dusts/iron"
+        "tag": "c:dusts/iron"
       },
       {
         "tag": "forge:ingots/iron"
@@ -12,7 +12,7 @@
     ],
     [
       {
-        "tag": "forge:dusts/iron"
+        "tag": "c:dusts/iron"
       },
       {
         "tag": "forge:ingots/iron"
@@ -20,10 +20,10 @@
     ],
     [
       {
-        "tag": "forge:dusts/nickel"
+        "tag": "c:dusts/nickel"
       },
       {
-        "tag": "forge:ingots/nickel"
+        "tag": "c:ingots/nickel"
       }
     ],
     {

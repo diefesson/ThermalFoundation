@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "#": {
-      "tag": "forge:raw_materials/lead"
+      "tag": "c:raw_materials/lead"
     },
     "I": {
       "item": "thermal:raw_lead"

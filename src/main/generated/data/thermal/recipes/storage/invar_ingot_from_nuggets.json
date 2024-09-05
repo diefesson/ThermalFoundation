@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "#": {
-      "tag": "forge:nuggets/invar"
+      "tag": "c:nuggets/invar"
     },
     "I": {
       "item": "thermal:invar_nugget"

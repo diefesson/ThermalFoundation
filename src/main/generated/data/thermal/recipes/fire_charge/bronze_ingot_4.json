@@ -4,7 +4,7 @@
   "ingredients": [
     [
       {
-        "tag": "forge:dusts/copper"
+        "tag": "c:dusts/copper"
       },
       {
         "tag": "forge:ingots/copper"
@@ -12,7 +12,7 @@
     ],
     [
       {
-        "tag": "forge:dusts/copper"
+        "tag": "c:dusts/copper"
       },
       {
         "tag": "forge:ingots/copper"
@@ -20,7 +20,7 @@
     ],
     [
       {
-        "tag": "forge:dusts/copper"
+        "tag": "c:dusts/copper"
       },
       {
         "tag": "forge:ingots/copper"
@@ -28,10 +28,10 @@
     ],
     [
       {
-        "tag": "forge:dusts/tin"
+        "tag": "c:dusts/tin"
       },
       {
-        "tag": "forge:ingots/tin"
+        "tag": "c:ingots/tin"
       }
     ],
     {
