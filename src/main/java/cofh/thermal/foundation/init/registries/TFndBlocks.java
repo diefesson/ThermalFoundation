@@ -102,34 +102,34 @@ public class TFndBlocks {
         blocksTab(registerBlock(ID_NICKEL_ORE, OreBlockCoFH::createStoneOre, ID_THERMAL_FOUNDATION));
         blocksTab(registerBlock(deepslate(ID_NICKEL_ORE), OreBlockCoFH::createDeepslateOre, ID_THERMAL_FOUNDATION));
 
-        blocksTab(registerBlock(ID_RUBY_ORE, () -> OreBlockCoFH.createStoneOre().xp(3, 7), ID_THERMAL_FOUNDATION));
-        blocksTab(registerBlock(deepslate(ID_RUBY_ORE), () -> OreBlockCoFH.createDeepslateOre().xp(3, 7), ID_THERMAL_FOUNDATION));
-        blocksTab(registerBlock(ID_SAPPHIRE_ORE, () -> OreBlockCoFH.createStoneOre().xp(3, 7), ID_THERMAL_FOUNDATION));
-        blocksTab(registerBlock(deepslate(ID_SAPPHIRE_ORE), () -> OreBlockCoFH.createDeepslateOre().xp(3, 7), ID_THERMAL_FOUNDATION));
+        blocksTab(5, registerBlock(ID_RUBY_ORE, () -> OreBlockCoFH.createStoneOre().xp(3, 7), ID_THERMAL_FOUNDATION));
+        blocksTab(5, registerBlock(deepslate(ID_RUBY_ORE), () -> OreBlockCoFH.createDeepslateOre().xp(3, 7), ID_THERMAL_FOUNDATION));
+        blocksTab(5, registerBlock(ID_SAPPHIRE_ORE, () -> OreBlockCoFH.createStoneOre().xp(3, 7), ID_THERMAL_FOUNDATION));
+        blocksTab(5, registerBlock(deepslate(ID_SAPPHIRE_ORE), () -> OreBlockCoFH.createDeepslateOre().xp(3, 7), ID_THERMAL_FOUNDATION));
 
-        blocksTab(registerBlock(ID_OIL_SAND, () -> new SandBlock(14406560, copy(Blocks.SAND)),
+        blocksTab(10, registerBlock(ID_OIL_SAND, () -> new SandBlock(14406560, copy(Blocks.SAND)),
                 () -> new BlockItemCoFH(BLOCKS.get(ID_OIL_SAND), itemProperties()).setBurnTime(2400).setModId(ID_THERMAL_FOUNDATION)));
 
-        blocksTab(registerBlock(ID_OIL_RED_SAND, () -> new SandBlock(11098145, copy(Blocks.RED_SAND)),
+        blocksTab(10, registerBlock(ID_OIL_RED_SAND, () -> new SandBlock(11098145, copy(Blocks.RED_SAND)),
                 () -> new BlockItemCoFH(BLOCKS.get(ID_OIL_RED_SAND), itemProperties()).setBurnTime(2400).setModId(ID_THERMAL_FOUNDATION)));
     }
 
     private static void registerStorage() {
 
-        blocksTab(10, registerBlock(raw(ID_TIN_BLOCK), () -> new Block(of().mapColor(TERRACOTTA_LIGHT_BLUE).strength(5.0F, 6.0F).requiresCorrectToolForDrops()), ID_THERMAL_FOUNDATION));
-        blocksTab(10, registerBlock(raw(ID_LEAD_BLOCK), () -> new Block(of().mapColor(TERRACOTTA_BLUE).strength(5.0F, 6.0F).requiresCorrectToolForDrops()), ID_THERMAL_FOUNDATION));
-        blocksTab(10, registerBlock(raw(ID_SILVER_BLOCK), () -> new Block(of().mapColor(TERRACOTTA_LIGHT_GRAY).strength(5.0F, 6.0F).requiresCorrectToolForDrops()), ID_THERMAL_FOUNDATION));
-        blocksTab(10, registerBlock(raw(ID_NICKEL_BLOCK), () -> new Block(of().mapColor(TERRACOTTA_YELLOW).strength(5.0F, 6.0F).requiresCorrectToolForDrops()), ID_THERMAL_FOUNDATION));
+        blocksTab(20, registerBlock(raw(ID_TIN_BLOCK), () -> new Block(of().mapColor(TERRACOTTA_LIGHT_BLUE).strength(5.0F, 6.0F).requiresCorrectToolForDrops()), ID_THERMAL_FOUNDATION));
+        blocksTab(20, registerBlock(raw(ID_LEAD_BLOCK), () -> new Block(of().mapColor(TERRACOTTA_BLUE).strength(5.0F, 6.0F).requiresCorrectToolForDrops()), ID_THERMAL_FOUNDATION));
+        blocksTab(20, registerBlock(raw(ID_SILVER_BLOCK), () -> new Block(of().mapColor(TERRACOTTA_LIGHT_GRAY).strength(5.0F, 6.0F).requiresCorrectToolForDrops()), ID_THERMAL_FOUNDATION));
+        blocksTab(20, registerBlock(raw(ID_NICKEL_BLOCK), () -> new Block(of().mapColor(TERRACOTTA_YELLOW).strength(5.0F, 6.0F).requiresCorrectToolForDrops()), ID_THERMAL_FOUNDATION));
 
-        blocksTab(10, registerBlock(ID_TIN_BLOCK, () -> new Block(of().mapColor(RAW_IRON).strength(5.0F, 6.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()), ID_THERMAL_FOUNDATION));
-        blocksTab(10, registerBlock(ID_LEAD_BLOCK, () -> new Block(of().mapColor(COLOR_PURPLE).strength(5.0F, 6.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()), ID_THERMAL_FOUNDATION));
-        blocksTab(10, registerBlock(ID_SILVER_BLOCK, () -> new Block(of().mapColor(RAW_IRON).strength(5.0F, 6.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()), ID_THERMAL_FOUNDATION));
-        blocksTab(10, registerBlock(ID_NICKEL_BLOCK, () -> new Block(of().mapColor(RAW_IRON).strength(5.0F, 6.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()), ID_THERMAL_FOUNDATION));
+        blocksTab(25, registerBlock(ID_TIN_BLOCK, () -> new Block(of().mapColor(RAW_IRON).strength(5.0F, 6.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()), ID_THERMAL_FOUNDATION));
+        blocksTab(25, registerBlock(ID_LEAD_BLOCK, () -> new Block(of().mapColor(COLOR_PURPLE).strength(5.0F, 6.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()), ID_THERMAL_FOUNDATION));
+        blocksTab(25, registerBlock(ID_SILVER_BLOCK, () -> new Block(of().mapColor(RAW_IRON).strength(5.0F, 6.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()), ID_THERMAL_FOUNDATION));
+        blocksTab(25, registerBlock(ID_NICKEL_BLOCK, () -> new Block(of().mapColor(RAW_IRON).strength(5.0F, 6.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()), ID_THERMAL_FOUNDATION));
 
-        blocksTab(20, registerBlock(ID_BRONZE_BLOCK, () -> new Block(of().mapColor(COLOR_ORANGE).strength(5.0F, 6.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()), ID_THERMAL_FOUNDATION));
-        blocksTab(20, registerBlock(ID_ELECTRUM_BLOCK, () -> new Block(of().mapColor(GOLD).strength(5.0F, 6.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()), ID_THERMAL_FOUNDATION));
-        blocksTab(20, registerBlock(ID_INVAR_BLOCK, () -> new Block(of().mapColor(COLOR_GRAY).strength(5.0F, 6.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()), ID_THERMAL_FOUNDATION));
-        blocksTab(20, registerBlock(ID_CONSTANTAN_BLOCK, () -> new Block(of().mapColor(COLOR_ORANGE).strength(5.0F, 6.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()), ID_THERMAL_FOUNDATION));
+        blocksTab(30, registerBlock(ID_BRONZE_BLOCK, () -> new Block(of().mapColor(COLOR_ORANGE).strength(5.0F, 6.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()), ID_THERMAL_FOUNDATION));
+        blocksTab(30, registerBlock(ID_ELECTRUM_BLOCK, () -> new Block(of().mapColor(GOLD).strength(5.0F, 6.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()), ID_THERMAL_FOUNDATION));
+        blocksTab(30, registerBlock(ID_INVAR_BLOCK, () -> new Block(of().mapColor(COLOR_GRAY).strength(5.0F, 6.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()), ID_THERMAL_FOUNDATION));
+        blocksTab(30, registerBlock(ID_CONSTANTAN_BLOCK, () -> new Block(of().mapColor(COLOR_ORANGE).strength(5.0F, 6.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()), ID_THERMAL_FOUNDATION));
 
         blocksTab(40, registerBlock(ID_RUBY_BLOCK, () -> new Block(of().mapColor(COLOR_RED).strength(5.0F, 6.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()), ID_THERMAL_FOUNDATION));
         blocksTab(40, registerBlock(ID_SAPPHIRE_BLOCK, () -> new Block(of().mapColor(COLOR_BLUE).strength(5.0F, 6.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()), ID_THERMAL_FOUNDATION));

@@ -32,6 +32,11 @@
   "block.thermal.oil_sand": "Bituminous Sand",
   "block.thermal.oil_red_sand": "Bituminous Red Sand",
 
+  "block.thermal.raw_lead_block": "Block of Raw Lead",
+  "block.thermal.raw_nickel_block": "Block of Raw Nickel",
+  "block.thermal.raw_silver_block": "Block of Raw Silver",
+  "block.thermal.raw_tin_block": "Block of Raw Tin",
+
   "block.thermal.lead_block": "Block of Lead",
   "block.thermal.nickel_block": "Block of Nickel",
   "block.thermal.silver_block": "Block of Silver",
